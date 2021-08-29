@@ -1,0 +1,5931 @@
+[
+    {
+        "id": "a3691a22.99bc98",
+        "type": "tab",
+        "label": "NFL Scoreboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7a54fa2b.7ed924",
+        "type": "tab",
+        "label": "Monitor Temp",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "33b619c1.54b586",
+        "type": "http request",
+        "z": "a3691a22.99bc98",
+        "name": "Get Scorecards",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.cbssports.com/nfl/scoreboard",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 620,
+        "y": 40,
+        "wires": [
+            [
+                "ea737f28.32a99"
+            ]
+        ]
+    },
+    {
+        "id": "74724fc9.e5964",
+        "type": "html",
+        "z": "a3691a22.99bc98",
+        "name": "Matchup Names Array",
+        "property": "payload",
+        "outproperty": "names",
+        "tag": ".helper-team-name",
+        "ret": "html",
+        "as": "single",
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "773d358d.05445c",
+                "cb954ceb0dddf8ef"
+            ]
+        ]
+    },
+    {
+        "id": "bac07b91.9930f8",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "teamdata",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "L00-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L01-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L02-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L03-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L04-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L05-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L06-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L07-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L08-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L09-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L10-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L11-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L12-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L13-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L14-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L15-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L16-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L17-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L18-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L19-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L20-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L21-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L22-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L23-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L24-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L25-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L26-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L27-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L28-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L29-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L30-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L31-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L32-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L33-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L34-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L35-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L36-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L37-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L38-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L39-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L40-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L41-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L42-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L43-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L44-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L45-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L46-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L47-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L48-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L49-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 50,
+        "x": 750,
+        "y": 1340,
+        "wires": [
+            [
+                "9bc410a3.cb4ce"
+            ],
+            [
+                "5ee7ad00.68c724"
+            ],
+            [
+                "b3b202ed.70066"
+            ],
+            [
+                "ba1b36ae.e3c138"
+            ],
+            [
+                "d584a0a.d59d16"
+            ],
+            [
+                "674afba0.ac6e44"
+            ],
+            [
+                "aa631381.38cb6"
+            ],
+            [
+                "a18640d9.be164"
+            ],
+            [
+                "963ee73c.212488"
+            ],
+            [
+                "d12ed9cd.5b9cc8"
+            ],
+            [
+                "121080aa.ef2b3f"
+            ],
+            [
+                "3a142ff3.1a19e"
+            ],
+            [
+                "9bcea167.f865c"
+            ],
+            [
+                "cde250d8.a33ab"
+            ],
+            [
+                "1257a289.e4987d"
+            ],
+            [
+                "a1d93cfd.3769a"
+            ],
+            [
+                "66999faa.c816c"
+            ],
+            [
+                "dce3196.1014be8"
+            ],
+            [
+                "edfe110d.65172"
+            ],
+            [
+                "3e3507bc.cc78f8"
+            ],
+            [
+                "a63254ec.4c2508"
+            ],
+            [
+                "8cfaf62a.6ed7a8"
+            ],
+            [
+                "55328b00.9f4864"
+            ],
+            [
+                "9bbd9c85.4f5ba"
+            ],
+            [
+                "2e68f5c2.a0a0ba"
+            ],
+            [
+                "83360c6e.43498"
+            ],
+            [
+                "114dd59.93d012a"
+            ],
+            [
+                "1700cf2b.2dbd41"
+            ],
+            [
+                "432ab2ab.3a2cec"
+            ],
+            [
+                "6bcc5480.603b9c"
+            ],
+            [
+                "a0de7f10.d03cd"
+            ],
+            [
+                "a3d07cd1.e093b"
+            ],
+            [
+                "e0ad69c7.6629e8"
+            ],
+            [
+                "42732402.d9adfc"
+            ],
+            [
+                "7b032db4.3f5ee4"
+            ],
+            [
+                "87e37316.e8cd5"
+            ],
+            [
+                "d3f75744.ce50c8"
+            ],
+            [
+                "a9f803fc.2e232"
+            ],
+            [
+                "1b1164c3.21093b"
+            ],
+            [
+                "cf4480fb.8c38e"
+            ],
+            [
+                "35c625c3.f1919a"
+            ],
+            [
+                "b96a5488.17af88"
+            ],
+            [
+                "44115592.36b3fc"
+            ],
+            [
+                "1450d5d3.4303fa"
+            ],
+            [
+                "8165a3a2.c6b1e"
+            ],
+            [
+                "47051ba5.1949b4"
+            ],
+            [
+                "4a7bdd18.eb9094"
+            ],
+            [
+                "49bb1e8a.42021"
+            ],
+            [
+                "ff0161f9.8445d"
+            ],
+            [
+                "7a133199.d817e"
+            ]
+        ]
+    },
+    {
+        "id": "9bc410a3.cb4ce",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light0",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ee7ad00.68c724",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light1",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b3b202ed.70066",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light2",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba1b36ae.e3c138",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light3",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d584a0a.d59d16",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light4",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "674afba0.ac6e44",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light5",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa631381.38cb6",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 6",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light6",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a18640d9.be164",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 7",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light7",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "963ee73c.212488",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 8",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light8",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d12ed9cd.5b9cc8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 9",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light9",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "121080aa.ef2b3f",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 10",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light10",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a142ff3.1a19e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 11",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light11",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bcea167.f865c",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 12",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light12",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cde250d8.a33ab",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 13",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light13",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1257a289.e4987d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 14",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light14",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1d93cfd.3769a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 15",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light15",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66999faa.c816c",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 16",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light16",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dce3196.1014be8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 17",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light17",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "edfe110d.65172",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 18",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light18",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e3507bc.cc78f8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 19",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light19",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a63254ec.4c2508",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 20",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light20",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8cfaf62a.6ed7a8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 21",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light21",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55328b00.9f4864",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 22",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light22",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bbd9c85.4f5ba",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 23",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light23",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e68f5c2.a0a0ba",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 24",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light24",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83360c6e.43498",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 25",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light25",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "114dd59.93d012a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 26",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light26",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1700cf2b.2dbd41",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 27",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light27",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "432ab2ab.3a2cec",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 28",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light28",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bcc5480.603b9c",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 29",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light29",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0de7f10.d03cd",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 30",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light30",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3d07cd1.e093b",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 31",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light31",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0ad69c7.6629e8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 32",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light32",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42732402.d9adfc",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 33",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light33",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b032db4.3f5ee4",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 34",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light34",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87e37316.e8cd5",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 35",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light35",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3f75744.ce50c8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 36",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light36",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9f803fc.2e232",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 37",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light37",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b1164c3.21093b",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 38",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light38",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf4480fb.8c38e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 39",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light39",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35c625c3.f1919a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 40",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light40",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b96a5488.17af88",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 41",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light41",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44115592.36b3fc",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 42",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light42",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1450d5d3.4303fa",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 43",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light43",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8165a3a2.c6b1e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 44",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light44",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47051ba5.1949b4",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 45",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light45",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a7bdd18.eb9094",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 46",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light46",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49bb1e8a.42021",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 47",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light47",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff0161f9.8445d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 48",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light48",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a133199.d817e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 49",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light49",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46eff03.f56ce1",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Assemble Code",
+        "func": "msg.fullcode = flow.get(\"light0\") + \"\\n\" + flow.get(\"light1\") + \"\\n\" + flow.get(\"light2\") + \"\\n\"+ flow.get(\"light3\") + \"\\n\"+ flow.get(\"light4\") + \"\\n\"+ flow.get(\"light5\") + \"\\n\" + flow.get(\"light6\") + \"\\n\" + flow.get(\"light7\") + \"\\n\" + flow.get(\"light8\") + \"\\n\" + flow.get(\"light9\") + \"\\n\" + flow.get(\"light10\") + \"\\n\" + flow.get(\"light11\") + \"\\n\" + flow.get(\"light12\") + \"\\n\" + flow.get(\"light13\") + \"\\n\" + flow.get(\"light14\") + \"\\n\" + flow.get(\"light15\") + \"\\n\" + flow.get(\"light16\") + \"\\n\" + flow.get(\"light17\") + \"\\n\" + flow.get(\"light18\") + \"\\n\" + flow.get(\"light19\") + \"\\n\" + flow.get(\"light20\") + \"\\n\" + flow.get(\"light21\") + \"\\n\" + flow.get(\"light22\") + \"\\n\" + flow.get(\"light23\") + \"\\n\" + flow.get(\"light24\") + \"\\n\" + flow.get(\"light25\") + \"\\n\" + flow.get(\"light26\") + \"\\n\" + flow.get(\"light27\") + \"\\n\" + flow.get(\"light28\") + \"\\n\" + flow.get(\"light29\") + \"\\n\" + flow.get(\"light30\") + \"\\n\" + flow.get(\"light31\") + \"\\n\" + flow.get(\"light32\") + \"\\n\" + flow.get(\"light33\") + \"\\n\" + flow.get(\"light34\") + \"\\n\" + flow.get(\"light35\") + \"\\n\" + flow.get(\"light36\") + \"\\n\" + flow.get(\"light37\") + \"\\n\" + flow.get(\"light38\") + \"\\n\" + flow.get(\"light39\") + \"\\n\" + flow.get(\"light40\") + \"\\n\" + flow.get(\"light41\") + \"\\n\" + flow.get(\"light42\") + \"\\n\" + flow.get(\"light43\") + \"\\n\" + flow.get(\"light44\") + \"\\n\" + flow.get(\"light45\") + \"\\n\" + flow.get(\"light46\") + \"\\n\" + flow.get(\"light47\") + \"\\n\" + flow.get(\"light48\") + \"\\n\" + flow.get(\"light49\") + \"\\n\" + flow.get(\"light50\") + \"\\n\" + flow.get(\"light51\") + \"\\n\" + flow.get(\"light52\") + \"\\n\" + flow.get(\"light53\") + \"\\n\" + flow.get(\"light54\") + \"\\n\" + flow.get(\"light55\") + \"\\n\" + flow.get(\"light56\") + \"\\n\" + flow.get(\"light57\") + \"\\n\" + flow.get(\"light58\") + \"\\n\" + flow.get(\"light59\") + \"\\n\" + flow.get(\"light60\") + \"\\n\" + flow.get(\"light61\") + \"\\n\" + flow.get(\"light62\") + \"\\n\" + flow.get(\"light63\") + \"\\n\" + flow.get(\"light64\") + \"\\n\" + flow.get(\"light65\") + \"\\n\" + flow.get(\"light66\") + \"\\n\" + flow.get(\"light67\") + \"\\n\" + flow.get(\"light68\") + \"\\n\" + flow.get(\"light69\") + \"\\n\" + flow.get(\"light70\") + \"\\n\" + flow.get(\"light71\") + \"\\n\" + flow.get(\"light72\") + \"\\n\" + flow.get(\"light73\") + \"\\n\" + flow.get(\"light74\") + \"\\n\" + flow.get(\"light75\") + \"\\n\" + flow.get(\"light76\") + \"\\n\" + flow.get(\"light77\") + \"\\n\" + flow.get(\"light78\") + \"\\n\" + flow.get(\"light79\") + \"\\n\" + flow.get(\"light80\") + \"\\n\" + flow.get(\"light81\") + \"\\n\" + flow.get(\"light82\") + \"\\n\" + flow.get(\"light83\") + \"\\n\" + flow.get(\"light84\") + \"\\n\" + flow.get(\"light85\") + \"\\n\" + flow.get(\"light86\") + \"\\n\" + flow.get(\"light87\") + \"\\n\" + flow.get(\"light88\") + \"\\n\" + flow.get(\"light89\") + \"\\n\" + flow.get(\"light90\") + \"\\n\" + flow.get(\"light91\") + \"\\n\" + flow.get(\"light92\") + \"\\n\" + flow.get(\"light93\") + \"\\n\" + flow.get(\"light94\") + \"\\n\" + flow.get(\"light95\") + \"\\n\" + flow.get(\"light96\") + \"\\n\" + flow.get(\"light97\") + \"\\n\" + flow.get(\"light98\")  + \"\\n\" + flow.get(\"light99\")\n\nmsg.payload = msg.fullcode.replace(\"undefined\", \"L00-X-0\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 100,
+        "y": 1100,
+        "wires": [
+            [
+                "ffa113ff.c9c2d",
+                "a4e91827.82b7d8",
+                "d00ae205.f9ab4"
+            ]
+        ]
+    },
+    {
+        "id": "ea737f28.32a99",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Set Undefined",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light0",
+                "pt": "flow",
+                "to": "L00-X-0",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "light1",
+                "pt": "flow",
+                "to": "L01-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light2",
+                "pt": "flow",
+                "to": "L02-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light3",
+                "pt": "flow",
+                "to": "L03-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light4",
+                "pt": "flow",
+                "to": "L04-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light5",
+                "pt": "flow",
+                "to": "L05-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light6",
+                "pt": "flow",
+                "to": "L06-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light7",
+                "pt": "flow",
+                "to": "L07-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light8",
+                "pt": "flow",
+                "to": "L08-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light9",
+                "pt": "flow",
+                "to": "L09-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light10",
+                "pt": "flow",
+                "to": "L10-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light11",
+                "pt": "flow",
+                "to": "L11-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light12",
+                "pt": "flow",
+                "to": "L12-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light13",
+                "pt": "flow",
+                "to": "L13-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light14",
+                "pt": "flow",
+                "to": "L14-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light15",
+                "pt": "flow",
+                "to": "L15-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light16",
+                "pt": "flow",
+                "to": "L16-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light17",
+                "pt": "flow",
+                "to": "L17-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light18",
+                "pt": "flow",
+                "to": "L18-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light19",
+                "pt": "flow",
+                "to": "L19-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light20",
+                "pt": "flow",
+                "to": "L20-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light21",
+                "pt": "flow",
+                "to": "L21-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light22",
+                "pt": "flow",
+                "to": "L22-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light23",
+                "pt": "flow",
+                "to": "L23-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light24",
+                "pt": "flow",
+                "to": "L24-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light25",
+                "pt": "flow",
+                "to": "L25-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light26",
+                "pt": "flow",
+                "to": "L26-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light27",
+                "pt": "flow",
+                "to": "L27-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light28",
+                "pt": "flow",
+                "to": "L28-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light29",
+                "pt": "flow",
+                "to": "L29-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light30",
+                "pt": "flow",
+                "to": "L30-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light31",
+                "pt": "flow",
+                "to": "L31-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light32",
+                "pt": "flow",
+                "to": "L32-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light33",
+                "pt": "flow",
+                "to": "L33-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light34",
+                "pt": "flow",
+                "to": "L34-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light35",
+                "pt": "flow",
+                "to": "L35-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light36",
+                "pt": "flow",
+                "to": "L36-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light37",
+                "pt": "flow",
+                "to": "L37-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light38",
+                "pt": "flow",
+                "to": "L38-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light39",
+                "pt": "flow",
+                "to": "L39-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light40",
+                "pt": "flow",
+                "to": "L40-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light41",
+                "pt": "flow",
+                "to": "L41-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light42",
+                "pt": "flow",
+                "to": "L42-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light43",
+                "pt": "flow",
+                "to": "L43-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light44",
+                "pt": "flow",
+                "to": "L44-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light45",
+                "pt": "flow",
+                "to": "L45-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light46",
+                "pt": "flow",
+                "to": "L46-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light47",
+                "pt": "flow",
+                "to": "L47-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light48",
+                "pt": "flow",
+                "to": "L48-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light49",
+                "pt": "flow",
+                "to": "L49-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light50",
+                "pt": "flow",
+                "to": "L50-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light51",
+                "pt": "flow",
+                "to": "L51-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light52",
+                "pt": "flow",
+                "to": "L52-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light53",
+                "pt": "flow",
+                "to": "L53-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light54",
+                "pt": "flow",
+                "to": "L54-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light55",
+                "pt": "flow",
+                "to": "L55-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light56",
+                "pt": "flow",
+                "to": "L56-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light57",
+                "pt": "flow",
+                "to": "L57-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light58",
+                "pt": "flow",
+                "to": "L58-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light59",
+                "pt": "flow",
+                "to": "L59-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light60",
+                "pt": "flow",
+                "to": "L60-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light61",
+                "pt": "flow",
+                "to": "L61-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light62",
+                "pt": "flow",
+                "to": "L62-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light63",
+                "pt": "flow",
+                "to": "L63-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light64",
+                "pt": "flow",
+                "to": "L64-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light65",
+                "pt": "flow",
+                "to": "L65-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light66",
+                "pt": "flow",
+                "to": "L66-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light67",
+                "pt": "flow",
+                "to": "L67-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light68",
+                "pt": "flow",
+                "to": "L68-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light69",
+                "pt": "flow",
+                "to": "L69-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light70",
+                "pt": "flow",
+                "to": "L70-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light71",
+                "pt": "flow",
+                "to": "L71-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light72",
+                "pt": "flow",
+                "to": "L72-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light73",
+                "pt": "flow",
+                "to": "L73-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light74",
+                "pt": "flow",
+                "to": "L74-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light75",
+                "pt": "flow",
+                "to": "L75-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light76",
+                "pt": "flow",
+                "to": "L76-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light77",
+                "pt": "flow",
+                "to": "L77-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light78",
+                "pt": "flow",
+                "to": "L78-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light79",
+                "pt": "flow",
+                "to": "L79-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light80",
+                "pt": "flow",
+                "to": "L80-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light81",
+                "pt": "flow",
+                "to": "L81-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light82",
+                "pt": "flow",
+                "to": "L82-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light83",
+                "pt": "flow",
+                "to": "L83-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light84",
+                "pt": "flow",
+                "to": "L84-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light85",
+                "pt": "flow",
+                "to": "L85-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light86",
+                "pt": "flow",
+                "to": "L86-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light87",
+                "pt": "flow",
+                "to": "L87-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light88",
+                "pt": "flow",
+                "to": "L88-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light89",
+                "pt": "flow",
+                "to": "L89-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light90",
+                "pt": "flow",
+                "to": "L90-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light91",
+                "pt": "flow",
+                "to": "L91-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light92",
+                "pt": "flow",
+                "to": "L92-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light93",
+                "pt": "flow",
+                "to": "L93-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light94",
+                "pt": "flow",
+                "to": "L94-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light95",
+                "pt": "flow",
+                "to": "L95-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light96",
+                "pt": "flow",
+                "to": "L96-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light97",
+                "pt": "flow",
+                "to": "L97-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light98",
+                "pt": "flow",
+                "to": "L98-X-0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "light99",
+                "pt": "flow",
+                "to": "L99-X-0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "74724fc9.e5964"
+            ]
+        ]
+    },
+    {
+        "id": "3cfd8fe8.d73e6",
+        "type": "file",
+        "z": "a3691a22.99bc98",
+        "name": "New scores",
+        "filename": "/home/pi/Scoreboard/scores.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 90,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a3aecc3.659ea4",
+        "type": "stoptimer",
+        "z": "a3691a22.99bc98",
+        "duration": "4",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 100,
+        "y": 1060,
+        "wires": [
+            [
+                "46eff03.f56ce1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "56df7000.d9913",
+        "type": "time-range-switch",
+        "z": "a3691a22.99bc98",
+        "name": "Sunday",
+        "lat": "",
+        "lon": "",
+        "startTime": "10:59",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ],
+            [
+                "a3f27574.8ff2e8"
+            ]
+        ]
+    },
+    {
+        "id": "91d0915a.d8576",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "func": "var d = new Date();\nvar n = d.getDay();\n\nmsg.weekday = n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 115,
+        "y": 120,
+        "wires": [
+            [
+                "45ae4505.fde1ac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "45ae4505.fde1ac",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "weekday",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "56df7000.d9913"
+            ],
+            [
+                "9ea3fe96.1bddc"
+            ],
+            [
+                "91d3a296.2b15a"
+            ],
+            [
+                "a3f27574.8ff2e8"
+            ]
+        ]
+    },
+    {
+        "id": "9ea3fe96.1bddc",
+        "type": "time-range-switch",
+        "z": "a3691a22.99bc98",
+        "name": "Monday",
+        "lat": "",
+        "lon": "",
+        "startTime": "17:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ],
+            [
+                "a3f27574.8ff2e8"
+            ]
+        ]
+    },
+    {
+        "id": "91d3a296.2b15a",
+        "type": "time-range-switch",
+        "z": "a3691a22.99bc98",
+        "name": "Thursday",
+        "lat": "",
+        "lon": "",
+        "startTime": "10:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ],
+            [
+                "a3f27574.8ff2e8"
+            ]
+        ]
+    },
+    {
+        "id": "43bd3c9a.5710c4",
+        "type": "inject",
+        "z": "a3691a22.99bc98",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ]
+        ]
+    },
+    {
+        "id": "289049f6.d4ed66",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "teamdata",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "L50-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L51-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L52-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L53-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L54-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L55-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L56-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L57-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L58-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L59-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L60-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L61-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L62-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L63-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L64-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L65-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L66-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L67-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L68-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L69-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L70-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L71-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L72-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L73-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L74-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L75-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L76-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L77-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L78-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L79-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L80-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L81-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L82-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L83-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L84-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L85-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L86-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L87-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L88-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L89-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L90-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L91-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L92-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L93-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L94-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L95-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L96-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L97-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L98-",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "L99-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 50,
+        "x": 1270,
+        "y": 1340,
+        "wires": [
+            [
+                "7dbd6c2d.a29c44"
+            ],
+            [
+                "1819249b.503e6b"
+            ],
+            [
+                "f89a813a.855c3"
+            ],
+            [
+                "aedca29d.1011e"
+            ],
+            [
+                "eb8dfb7b.ac59a8"
+            ],
+            [
+                "adea1dd1.c8e32"
+            ],
+            [
+                "b591ffe8.36e2a"
+            ],
+            [
+                "4cf144a9.c863cc"
+            ],
+            [
+                "9cb6c4cc.0f4f78"
+            ],
+            [
+                "b75c40ce.7ff51"
+            ],
+            [
+                "ae30050c.06f998"
+            ],
+            [
+                "dfebe38d.2f69c"
+            ],
+            [
+                "f3638b05.7d4728"
+            ],
+            [
+                "31e28c3b.a40304"
+            ],
+            [
+                "9c888cbc.774d"
+            ],
+            [
+                "f7b79ab5.c3e1a8"
+            ],
+            [
+                "58059c67.1d79f4"
+            ],
+            [
+                "cd2d96c5.726218"
+            ],
+            [
+                "75654bc1.24b234"
+            ],
+            [
+                "3242b77.d630648"
+            ],
+            [
+                "9a01b00.b8e2b5"
+            ],
+            [
+                "7d3a6eef.ff79d"
+            ],
+            [
+                "460fc865.e4fc78"
+            ],
+            [
+                "1c2e5e4f.1b9c32"
+            ],
+            [
+                "d9f1cb0.6fb0038"
+            ],
+            [
+                "f94da5d2.009228"
+            ],
+            [
+                "37b8f587.9cb45a"
+            ],
+            [
+                "afbe78c2.e6e148"
+            ],
+            [
+                "9d246c0a.a8365"
+            ],
+            [
+                "32d28a01.5e3cb6"
+            ],
+            [
+                "34207538.79691a"
+            ],
+            [
+                "a936615f.e003d"
+            ],
+            [
+                "2fee3d66.c0e112"
+            ],
+            [
+                "17c0f523.1a13fb"
+            ],
+            [
+                "2459275.d446ad8"
+            ],
+            [
+                "4fae56b5.06c7e8"
+            ],
+            [
+                "79330ca4.4815c4"
+            ],
+            [
+                "c32bf08e.f860c"
+            ],
+            [
+                "1fca394c.856677"
+            ],
+            [
+                "d6e3d214.2e077"
+            ],
+            [
+                "32e3e7f8.61ec28"
+            ],
+            [
+                "5a229d7c.eb9284"
+            ],
+            [
+                "332f90b8.aa8d"
+            ],
+            [
+                "97c81ffd.f2855"
+            ],
+            [
+                "2746e108.1b314e"
+            ],
+            [
+                "20230d22.3b3412"
+            ],
+            [
+                "40cb7e90.1c56a"
+            ],
+            [
+                "6ceba418.9ae3fc"
+            ],
+            [
+                "c3be29df.7a0c58"
+            ],
+            [
+                "f3bacab9.ea66f8"
+            ]
+        ]
+    },
+    {
+        "id": "7dbd6c2d.a29c44",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 50",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light50",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1819249b.503e6b",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 51",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light51",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f89a813a.855c3",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 52",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light52",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aedca29d.1011e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 53",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light53",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb8dfb7b.ac59a8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 54",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light54",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adea1dd1.c8e32",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 55",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light55",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b591ffe8.36e2a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 56",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light56",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cf144a9.c863cc",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 57",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light57",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cb6c4cc.0f4f78",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 58",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light58",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b75c40ce.7ff51",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 59",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light59",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae30050c.06f998",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 60",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light60",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfebe38d.2f69c",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 61",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light61",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3638b05.7d4728",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 62",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light62",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31e28c3b.a40304",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 63",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light63",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c888cbc.774d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 64",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light64",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7b79ab5.c3e1a8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 65",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light65",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58059c67.1d79f4",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 66",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light66",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd2d96c5.726218",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 67",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light67",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75654bc1.24b234",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 68",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light68",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3242b77.d630648",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 69",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light69",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a01b00.b8e2b5",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 70",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light70",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d3a6eef.ff79d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 71",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light71",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "460fc865.e4fc78",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 72",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light72",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c2e5e4f.1b9c32",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 73",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light73",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9f1cb0.6fb0038",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 74",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light74",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f94da5d2.009228",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 75",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light75",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37b8f587.9cb45a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 76",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light76",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "afbe78c2.e6e148",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 77",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light77",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d246c0a.a8365",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 78",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light78",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32d28a01.5e3cb6",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 79",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light79",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34207538.79691a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 80",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light80",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a936615f.e003d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 81",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light81",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2fee3d66.c0e112",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 82",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light82",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17c0f523.1a13fb",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 83",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light83",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2459275.d446ad8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 84",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light84",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fae56b5.06c7e8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 85",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light85",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79330ca4.4815c4",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 86",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light86",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c32bf08e.f860c",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 87",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light87",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fca394c.856677",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 88",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light88",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6e3d214.2e077",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 89",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light89",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32e3e7f8.61ec28",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 90",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light90",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a229d7c.eb9284",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 91",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light91",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "332f90b8.aa8d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 92",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light92",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97c81ffd.f2855",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 93",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light93",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2746e108.1b314e",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 94",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light94",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20230d22.3b3412",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 95",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light95",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40cb7e90.1c56a",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 96",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light96",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ceba418.9ae3fc",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 97",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light97",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3be29df.7a0c58",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 98",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light98",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3bacab9.ea66f8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Light 99",
+        "rules": [
+            {
+                "t": "set",
+                "p": "light99",
+                "pt": "flow",
+                "to": "teamdata",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3f27574.8ff2e8",
+        "type": "stoptimer",
+        "z": "a3691a22.99bc98",
+        "duration": "60",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "91d0915a.d8576"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "773d358d.05445c",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Matchups",
+        "func": "g01 = msg.names[0] + \"-\" + msg.names[1]\ng02 = msg.names[2] + \"-\" + msg.names[3]\ng03 = msg.names[4] + \"-\" + msg.names[5]\ng04 = msg.names[6] + \"-\" + msg.names[7]\ng05 = msg.names[8] + \"-\" + msg.names[9]\ng06 = msg.names[10] + \"-\" + msg.names[11]\ng07 = msg.names[12] + \"-\" + msg.names[13]\ng08 = msg.names[14] + \"-\" + msg.names[15]\ng09 = msg.names[16] + \"-\" + msg.names[17]\ng10 = msg.names[18] + \"-\" + msg.names[19]\ng11 = msg.names[20] + \"-\" + msg.names[21]\ng12 = msg.names[22] + \"-\" + msg.names[23]\ng13 = msg.names[24] + \"-\" + msg.names[25]\ng14 = msg.names[26] + \"-\" + msg.names[27]\ng15 = msg.names[28] + \"-\" + msg.names[29]\ng16 = msg.names[30] + \"-\" + msg.names[31]\n\nmsg.gamestring = g01 + \"\\n\" + g02 + \"\\n\" + g03 + \"\\n\" + g04 + \"\\n\" + g05 + \"\\n\" + g06 + \"\\n\" + g07 + \"\\n\" + g08 + \"\\n\" + g09 + \"\\n\" + g10 + \"\\n\" + g11 + \"\\n\" + g12 + \"\\n\" + g13 + \"\\n\" + g14 + \"\\n\" + g15 + \"\\n\" + g16\n\n//Replace team names with light numbers\n\nteam = 'Bears'\nnumber = '55'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Bengals'\nnumber = '38'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Bills'\nnumber = '26'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Broncos'\nnumber = '53'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Browns'\nnumber = '28'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Buccaneers'\nnumber = '08'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Cardinals'\nnumber = '70'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Chargers'\nnumber = '22'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Chiefs'\nnumber = '24'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Colts'\nnumber = '30'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Cowboys'\nnumber = '60'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Dolphins'\nnumber = '42'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Eagles'\nnumber = '58'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Falcons'\nnumber = '04'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = '49ers'\nnumber = '20'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Giants'\nnumber = '14'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Jaguars'\nnumber = '44'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Jets'\nnumber = '47'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Lions'\nnumber = '66'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Packers'\nnumber = '68'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Panthers'\nnumber = '00'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Patriots'\nnumber = '16'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Raiders'\nnumber = '40'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Rams'\nnumber = '64'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Ravens'\nnumber = '50'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Football Team'\nnumber = '02'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Saints'\nnumber = '62'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Seahawks'\nnumber = '11'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Steelers'\nnumber = '34'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Texans'\nnumber = '32'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Titans'\nnumber = '49'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\n\nteam = 'Vikings'\nnumber = '06'\nmsg.gamestring = msg.gamestring.replace(team, number)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 40,
+        "wires": [
+            [
+                "d8d2817a.64eaf",
+                "32ae8fc486308d67"
+            ]
+        ]
+    },
+    {
+        "id": "d8d2817a.64eaf",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "flow.matchups",
+        "rules": [
+            {
+                "t": "set",
+                "p": "matchups",
+                "pt": "flow",
+                "to": "gamestring",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 80,
+        "wires": [
+            [
+                "9b47e75.2e58518"
+            ]
+        ]
+    },
+    {
+        "id": "9b47e75.2e58518",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 120,
+        "wires": [
+            [
+                "ea071f81.37e74"
+            ]
+        ]
+    },
+    {
+        "id": "23238384.b7b4ac",
+        "type": "file",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "filename": "/home/pi/Scoreboard/matchups.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 920,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea071f81.37e74",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "func": "msg.payload = flow.get(\"matchups\")\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 855,
+        "y": 160,
+        "wires": [
+            [
+                "23238384.b7b4ac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b3f7eaf5.f22cc8",
+        "type": "http in",
+        "z": "a3691a22.99bc98",
+        "name": "Home Assistant Brightness",
+        "url": "/brightness",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1270,
+        "y": 40,
+        "wires": [
+            [
+                "91526991.b40df8"
+            ]
+        ]
+    },
+    {
+        "id": "91526991.b40df8",
+        "type": "file",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "filename": "/home/pi/Scoreboard/brightness.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1300,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca2df9d1.46a988",
+        "type": "exec",
+        "z": "a3691a22.99bc98",
+        "command": "sudo python3  /home/pi/Scoreboard/LED_Controller.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "oldrc": false,
+        "name": "Python Upload",
+        "x": 380,
+        "y": 1340,
+        "wires": [
+            [
+                "9a986444.0d8678"
+            ],
+            [
+                "9a986444.0d8678"
+            ],
+            [
+                "9a986444.0d8678"
+            ]
+        ]
+    },
+    {
+        "id": "3716e101.c2fd8e",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "Delay",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 70,
+        "y": 1200,
+        "wires": [
+            [
+                "3cfd8fe8.d73e6"
+            ]
+        ]
+    },
+    {
+        "id": "4c49098b.3e93d8",
+        "type": "http in",
+        "z": "a3691a22.99bc98",
+        "name": "Home Assistant Delay",
+        "url": "/delay",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1580,
+        "y": 40,
+        "wires": [
+            [
+                "9be4c768.0ce8e8"
+            ]
+        ]
+    },
+    {
+        "id": "7fb1683c.9547a8",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "flow.delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ffa113ff.c9c2d",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Set Delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "delay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 80,
+        "y": 1160,
+        "wires": [
+            [
+                "3716e101.c2fd8e"
+            ]
+        ]
+    },
+    {
+        "id": "68b04f2a.7a47",
+        "type": "inject",
+        "z": "a3691a22.99bc98",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "15",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 80,
+        "y": 1340,
+        "wires": [
+            [
+                "ac58db0.b2db828",
+                "ca2df9d1.46a988"
+            ]
+        ]
+    },
+    {
+        "id": "a4e91827.82b7d8",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "Check for Active",
+        "property": "fullcode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "-1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "-2",
+                "vt": "str"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 320,
+        "y": 1160,
+        "wires": [
+            [
+                "c72e769d.0e9438"
+            ],
+            [
+                "c72e769d.0e9438"
+            ],
+            [
+                "ca338e17.908e1"
+            ]
+        ]
+    },
+    {
+        "id": "6a8564d5.b25b9c",
+        "type": "link out",
+        "z": "a3691a22.99bc98",
+        "name": "Active Out",
+        "links": [
+            "35429d97.c48f02"
+        ],
+        "x": 615,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "65bf962b.269728",
+        "type": "link out",
+        "z": "a3691a22.99bc98",
+        "name": "Inactive Out",
+        "links": [
+            "790637ff.26fdd8"
+        ],
+        "x": 615,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "35429d97.c48f02",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "Active In",
+        "links": [
+            "6a8564d5.b25b9c",
+            "17dbc46c.854fbc"
+        ],
+        "x": 255,
+        "y": 180,
+        "wires": [
+            [
+                "5f0e4673.680968"
+            ]
+        ]
+    },
+    {
+        "id": "790637ff.26fdd8",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "Inactive In",
+        "links": [
+            "65bf962b.269728"
+        ],
+        "x": 35,
+        "y": 180,
+        "wires": [
+            [
+                "13fae481.5da49b"
+            ]
+        ]
+    },
+    {
+        "id": "2c3116f2.27412a",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 395,
+        "y": 180,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "674f77fc.e94f98",
+        "type": "http in",
+        "z": "a3691a22.99bc98",
+        "name": "Home Assistant Refresh Rate",
+        "url": "/refreshrate",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1880,
+        "y": 40,
+        "wires": [
+            [
+                "b292b072.d4574"
+            ]
+        ]
+    },
+    {
+        "id": "a1eebea.95a464",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "flow.refreshrate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "refreshrate",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1840,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f0e4673.680968",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "Set msg.refreshrate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "refreshrate",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 315,
+        "y": 180,
+        "wires": [
+            [
+                "2c3116f2.27412a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9be4c768.0ce8e8",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "func": "msg.payload = msg.payload * 60 * 1000\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 80,
+        "wires": [
+            [
+                "7fb1683c.9547a8"
+            ]
+        ]
+    },
+    {
+        "id": "b292b072.d4574",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "func": "msg.payload = msg.payload * 60 * 1000\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1820,
+        "y": 80,
+        "wires": [
+            [
+                "a1eebea.95a464"
+            ]
+        ]
+    },
+    {
+        "id": "e4847935.c42498",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 195,
+        "y": 180,
+        "wires": [
+            [
+                "91d0915a.d8576"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "13fae481.5da49b",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "refreshrate",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 115,
+        "y": 180,
+        "wires": [
+            [
+                "e4847935.c42498"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "62f3bcb7.b308f4",
+        "type": "catch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "scope": [
+            "33b619c1.54b586"
+        ],
+        "uncaught": false,
+        "x": 455,
+        "y": 240,
+        "wires": [
+            [
+                "2d1cb9cc.beec06"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "33fdb28a.fd08be",
+        "type": "file in",
+        "z": "a3691a22.99bc98",
+        "name": "Check trigger file",
+        "filename": "/home/pi/Scoreboard/trigger.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 150,
+        "y": 1500,
+        "wires": [
+            [
+                "fe4d23f.55cbbe",
+                "28af4410.e0ce4c"
+            ]
+        ]
+    },
+    {
+        "id": "ac58db0.b2db828",
+        "type": "file",
+        "z": "a3691a22.99bc98",
+        "name": "Reset trigger file",
+        "filename": "/home/pi/Scoreboard/trigger.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 140,
+        "y": 1420,
+        "wires": [
+            [
+                "f006d71a.1edd48",
+                "ee17d9fe.981c78"
+            ]
+        ]
+    },
+    {
+        "id": "fe4d23f.55cbbe",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "trigger",
+                "vt": "flow"
+            },
+            {
+                "t": "neq",
+                "v": "trigger",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 320,
+        "y": 1500,
+        "wires": [
+            [
+                "f006d71a.1edd48",
+                "ca2df9d1.46a988"
+            ],
+            [
+                "f006d71a.1edd48"
+            ]
+        ]
+    },
+    {
+        "id": "f006d71a.1edd48",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "trigger",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 315,
+        "y": 1540,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "ee17d9fe.981c78",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 140,
+        "y": 1460,
+        "wires": [
+            [
+                "33fdb28a.fd08be"
+            ]
+        ]
+    },
+    {
+        "id": "28af4410.e0ce4c",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "Check Every 60 Minutes",
+        "pauseType": "delay",
+        "timeout": "60",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 150,
+        "y": 1580,
+        "wires": [
+            [
+                "33fdb28a.fd08be"
+            ]
+        ]
+    },
+    {
+        "id": "ecb82cea.e5229",
+        "type": "http in",
+        "z": "a3691a22.99bc98",
+        "name": "Home Assistant Power",
+        "url": "/power",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 2140,
+        "y": 40,
+        "wires": [
+            [
+                "4286744d.6250ac",
+                "68c3f5e5.14422c"
+            ]
+        ]
+    },
+    {
+        "id": "4286744d.6250ac",
+        "type": "change",
+        "z": "a3691a22.99bc98",
+        "name": "flow.refreshrate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "power",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2120,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f136bd7.01bb18",
+        "type": "stoptimer",
+        "z": "a3691a22.99bc98",
+        "duration": "200",
+        "units": "Millisecond",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 555,
+        "y": 1140,
+        "wires": [
+            [
+                "6a8564d5.b25b9c"
+            ],
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "256222b7.2d14ae",
+        "type": "stoptimer",
+        "z": "a3691a22.99bc98",
+        "duration": "200",
+        "units": "Millisecond",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 555,
+        "y": 1180,
+        "wires": [
+            [
+                "65bf962b.269728"
+            ],
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "c72e769d.0e9438",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 435,
+        "y": 1140,
+        "wires": [
+            [
+                "89e97cd6.fe25b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "89e97cd6.fe25b",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "power",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 495,
+        "y": 1140,
+        "wires": [
+            [
+                "8f136bd7.01bb18"
+            ],
+            [
+                "c72e769d.0e9438"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ca338e17.908e1",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 435,
+        "y": 1180,
+        "wires": [
+            [
+                "41af1083.16eda"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "41af1083.16eda",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "property": "power",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 495,
+        "y": 1180,
+        "wires": [
+            [
+                "256222b7.2d14ae"
+            ],
+            [
+                "ca338e17.908e1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3664512.f1d66ae",
+        "type": "comment",
+        "z": "a3691a22.99bc98",
+        "name": "Wait for Power = On",
+        "info": "",
+        "x": 510,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "2d1cb9cc.beec06",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 475,
+        "y": 200,
+        "wires": [
+            [
+                "33b619c1.54b586"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d00ae205.f9ab4",
+        "type": "debug",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "68c3f5e5.14422c",
+        "type": "switch",
+        "z": "a3691a22.99bc98",
+        "name": "If On",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "On",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2090,
+        "y": 160,
+        "wires": [
+            [
+                "17dbc46c.854fbc"
+            ]
+        ]
+    },
+    {
+        "id": "17dbc46c.854fbc",
+        "type": "link out",
+        "z": "a3691a22.99bc98",
+        "name": "Get Data on Startup",
+        "links": [
+            "35429d97.c48f02"
+        ],
+        "x": 2185,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9a986444.0d8678",
+        "type": "debug",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f600011f.5b60a",
+        "type": "inject",
+        "z": "7a54fa2b.7ed924",
+        "name": "10 Minutes",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "50c7d928.58bd78"
+            ]
+        ]
+    },
+    {
+        "id": "50c7d928.58bd78",
+        "type": "exec",
+        "z": "7a54fa2b.7ed924",
+        "command": "/opt/vc/bin/vcgencmd measure_temp",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Python Upload",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "225856ec.a75c7a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c8172769.7f1008",
+        "type": "debug",
+        "z": "7a54fa2b.7ed924",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "82873294.3bd09",
+        "type": "file",
+        "z": "7a54fa2b.7ed924",
+        "name": "",
+        "filename": "/home/pi/Scoreboard/temperature.txt",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 290,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "225856ec.a75c7a",
+        "type": "function",
+        "z": "7a54fa2b.7ed924",
+        "name": "",
+        "func": "msg.payload = Date() + ' ' + msg.payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "82873294.3bd09",
+                "c8172769.7f1008"
+            ]
+        ]
+    },
+    {
+        "id": "81eb5cc3.299b8",
+        "type": "exec",
+        "z": "a3691a22.99bc98",
+        "command": "sudo python3  /home/pi/Scoreboard/startup.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Python Startup",
+        "x": 1040,
+        "y": 580,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dec1bb35.21eeb8",
+        "type": "inject",
+        "z": "a3691a22.99bc98",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1020,
+        "y": 520,
+        "wires": [
+            [
+                "236fe60d.74862a",
+                "81eb5cc3.299b8"
+            ]
+        ]
+    },
+    {
+        "id": "22f4a774.ba70e8",
+        "type": "exec",
+        "z": "a3691a22.99bc98",
+        "command": "sudo pkill -f /home/pi/Scoreboard/LED_Controller.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Python Kill",
+        "x": 550,
+        "y": 1640,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1da1b054.28dae",
+        "type": "inject",
+        "z": "a3691a22.99bc98",
+        "name": "Stop Python Script",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 570,
+        "y": 1580,
+        "wires": [
+            [
+                "22f4a774.ba70e8"
+            ]
+        ]
+    },
+    {
+        "id": "481f696d.45a188",
+        "type": "file",
+        "z": "a3691a22.99bc98",
+        "name": "Blank scores",
+        "filename": "/home/pi/Scoreboard/scores.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "236fe60d.74862a",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "func": "msg.payload = \"L00-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L01-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L02-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L03-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L04-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L05-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L06-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L07-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L08-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L09-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L10-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L11-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L12-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L13-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L14-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L15-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L16-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L17-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L18-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L19-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L20-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L21-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L22-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L23-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L24-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L25-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L26-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L27-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L28-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L29-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L30-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L31-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L32-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L33-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L34-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L35-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L36-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L37-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L38-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L39-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L40-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L41-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L42-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L43-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L44-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L45-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L46-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L47-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L48-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L49-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L50-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L51-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L52-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L53-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L54-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L55-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L56-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L57-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L58-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L59-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L60-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L61-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L62-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L63-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L64-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L65-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L66-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L67-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L68-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L69-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L70-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L71-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L72-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L73-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L74-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L75-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L76-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L77-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L78-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L79-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L80-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L81-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L82-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L83-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L84-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L85-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L86-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L87-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L88-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L89-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L90-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L91-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L92-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L93-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L94-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L95-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L96-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L97-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L98-X-0\" + \"\\n\"\nmsg.payload = msg.payload + \"L99-X-0\" + \"\\n\"\nreturn msg; ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 520,
+        "wires": [
+            [
+                "481f696d.45a188"
+            ]
+        ]
+    },
+    {
+        "id": "5828f77e6e4056d1",
+        "type": "link out",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "links": [
+            "b37839f5fa280d20",
+            "a930a118b7925ff6"
+        ],
+        "x": 695,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "cb954ceb0dddf8ef",
+        "type": "delay",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "5828f77e6e4056d1"
+            ]
+        ]
+    },
+    {
+        "id": "767d755372911920",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "Light 0-49",
+        "links": [
+            "312cac16ef745aaa",
+            "0158b2955e253cdd"
+        ],
+        "x": 615,
+        "y": 1320,
+        "wires": [
+            [
+                "bac07b91.9930f8"
+            ]
+        ]
+    },
+    {
+        "id": "545c515a792d2526",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "Light 50-99",
+        "links": [
+            "312cac16ef745aaa",
+            "0158b2955e253cdd"
+        ],
+        "x": 1175,
+        "y": 1360,
+        "wires": [
+            [
+                "289049f6.d4ed66"
+            ]
+        ]
+    },
+    {
+        "id": "3fee56b121a8e346",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "Execute Code",
+        "links": [
+            "312cac16ef745aaa",
+            "0158b2955e253cdd"
+        ],
+        "x": 75,
+        "y": 1000,
+        "wires": [
+            [
+                "6a3aecc3.659ea4"
+            ]
+        ]
+    },
+    {
+        "id": "32ae8fc486308d67",
+        "type": "debug",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a930a118b7925ff6",
+        "type": "link in",
+        "z": "a3691a22.99bc98",
+        "name": "New method",
+        "links": [
+            "5828f77e6e4056d1"
+        ],
+        "x": 135,
+        "y": 400,
+        "wires": [
+            [
+                "0cf147469adf29a5"
+            ]
+        ]
+    },
+    {
+        "id": "14181a0016ee9f4c",
+        "type": "debug",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "774b50a8b609ba98",
+        "type": "html",
+        "z": "a3691a22.99bc98",
+        "name": "Team names ",
+        "property": "games",
+        "outproperty": "teamname",
+        "tag": "a.team",
+        "ret": "html",
+        "as": "single",
+        "x": 280,
+        "y": 560,
+        "wires": [
+            [
+                "f9deaa91aab73f99"
+            ]
+        ]
+    },
+    {
+        "id": "f9deaa91aab73f99",
+        "type": "html",
+        "z": "a3691a22.99bc98",
+        "name": "Team scores",
+        "property": "games",
+        "outproperty": "teamscore",
+        "tag": ".total-score",
+        "ret": "html",
+        "as": "single",
+        "x": 280,
+        "y": 600,
+        "wires": [
+            [
+                "08c56837165ad314"
+            ]
+        ]
+    },
+    {
+        "id": "08c56837165ad314",
+        "type": "html",
+        "z": "a3691a22.99bc98",
+        "name": "Game Status",
+        "property": "games",
+        "outproperty": "gamestatus",
+        "tag": "div.top-bar",
+        "ret": "text",
+        "as": "single",
+        "x": 280,
+        "y": 640,
+        "wires": [
+            [
+                "884f1c6885ad0514"
+            ]
+        ]
+    },
+    {
+        "id": "0cf147469adf29a5",
+        "type": "html",
+        "z": "a3691a22.99bc98",
+        "name": "Team Games Array",
+        "property": "payload",
+        "outproperty": "games",
+        "tag": ".live-update",
+        "ret": "html",
+        "as": "multi",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "774b50a8b609ba98"
+            ]
+        ]
+    },
+    {
+        "id": "884f1c6885ad0514",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Fix Status Format",
+        "func": "msg.gamestatus = msg.gamestatus[0].trim()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 385,
+        "y": 640,
+        "wires": [
+            [
+                "dd1e71a0099bf156"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dd1e71a0099bf156",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Set Codes",
+        "func": "//Game Status/Flash Code\nflash = 0\nif(msg.gamestatus.search('m') == -1){\n    flash = 1\n}\nif(msg.gamestatus.substring(0, 3) == '4th'){\n    flash = 2\n}\nif(msg.gamestatus.substring(0, 2) == 'OT'){\n    flash = 2\n}\nif(msg.gamestatus == 'FINAL'){\n    flash = 0\n}\n\nmsg.flash = flash\n\n//Light Code\nif(parseFloat(msg.teamscore[0]) > parseFloat(msg.teamscore[1])){\n    t0_light = 'G'\n    t1_light = 'R'\n}\nif(parseFloat(msg.teamscore[0]) < parseFloat(msg.teamscore[1])){\n    t0_light = 'R'\n    t1_light = 'G'\n}\nif(parseFloat(msg.teamscore[0]) == parseFloat(msg.teamscore[1])){\n    t0_light = 'Y'\n    t1_light = 'Y'\n}\nif(msg.gamestatus.search('m') != -1){\n    t0_light = 'P'\n    t1_light = 'P'\n}\n\nmsg.team0light = t0_light\nmsg.team1light = t1_light\n\n//Replace team names with light numbers\n\nmsg.team1 = msg.teamname[0]\nmsg.team2 = msg.teamname[1]\n\nteam = 'Bears'\nnumber = '55'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Bengals'\nnumber = '38'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Bills'\nnumber = '26'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Broncos'\nnumber = '53'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Browns'\nnumber = '28'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Buccaneers'\nnumber = '08'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Cardinals'\nnumber = '70'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Chargers'\nnumber = '22'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Chiefs'\nnumber = '24'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Colts'\nnumber = '30'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Cowboys'\nnumber = '60'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Dolphins'\nnumber = '42'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Eagles'\nnumber = '58'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Falcons'\nnumber = '04'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = '49ers'\nnumber = '20'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Giants'\nnumber = '14'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Jaguars'\nnumber = '44'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Jets'\nnumber = '47'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Lions'\nnumber = '66'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Packers'\nnumber = '68'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Panthers'\nnumber = '00'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Patriots'\nnumber = '16'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Raiders'\nnumber = '40'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Rams'\nnumber = '64'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Ravens'\nnumber = '50'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Football Team'\nnumber = '02'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Saints'\nnumber = '62'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Seahawks'\nnumber = '11'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Steelers'\nnumber = '34'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Texans'\nnumber = '32'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Titans'\nnumber = '49'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nteam = 'Vikings'\nnumber = '06'\nmsg.teamname[0] = msg.teamname[0].replace(team, 'L' + number)\nmsg.teamname[1] = msg.teamname[1].replace(team, 'L' + number)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 700,
+        "wires": [
+            [
+                "6265299e7993993b"
+            ]
+        ]
+    },
+    {
+        "id": "6265299e7993993b",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Set Full String",
+        "func": "msg.string0 = msg.teamname[0] + '-' + msg.team0light + '-' + msg.flash\nmsg.string1 = msg.teamname[1] + '-' + msg.team1light + '-' + msg.flash\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "14181a0016ee9f4c",
+                "30bb83db95b9a599",
+                "834992f93b59a383"
+            ]
+        ]
+    },
+    {
+        "id": "30bb83db95b9a599",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Team 1",
+        "func": "msg.teamdata = msg.string0\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 720,
+        "wires": [
+            [
+                "0158b2955e253cdd"
+            ]
+        ]
+    },
+    {
+        "id": "834992f93b59a383",
+        "type": "function",
+        "z": "a3691a22.99bc98",
+        "name": "Team 2",
+        "func": "msg.teamdata = msg.string1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [
+                "0158b2955e253cdd"
+            ]
+        ]
+    },
+    {
+        "id": "0158b2955e253cdd",
+        "type": "link out",
+        "z": "a3691a22.99bc98",
+        "name": "",
+        "links": [
+            "767d755372911920",
+            "545c515a792d2526",
+            "3fee56b121a8e346"
+        ],
+        "x": 455,
+        "y": 920,
+        "wires": []
+    }
+]
